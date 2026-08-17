@@ -1,0 +1,2781 @@
+/* =========================================================
+   INNCA TECHNOLOGIES
+   INNOVATIVE SOLUTIONS
+   PRODUCT CONSTELLATION
+========================================================= */
+
+.solutions-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 12% 5%,
+      rgba(38, 190, 219, 0.08),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 88% 22%,
+      rgba(113, 130, 210, 0.06),
+      transparent 30%
+    ),
+    #020711;
+  color: #f5f7fb;
+}
+
+.solutions-page *,
+.solutions-page *::before,
+.solutions-page *::after {
+  box-sizing: border-box;
+}
+
+.solutions-section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: rgba(220, 231, 241, 0.52);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.solutions-section-label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 9px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.solutions-hero {
+  position: relative;
+
+  min-height: 88vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 150px 7vw 100px;
+
+  overflow: hidden;
+}
+
+.solutions-hero-grid,
+.vision-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.2;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 88%
+  );
+
+  pointer-events: none;
+}
+
+.solutions-hero-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.solutions-orb-one {
+  width: 520px;
+  height: 520px;
+
+  top: -260px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(35, 202, 228, 0.14),
+      transparent 68%
+    );
+
+  animation: floatOrb 12s ease-in-out infinite;
+}
+
+.solutions-orb-two {
+  width: 600px;
+  height: 600px;
+
+  right: -300px;
+  bottom: -300px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(104, 124, 205, 0.09),
+      transparent 68%
+    );
+
+  animation: floatOrb 16s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(25px, -20px, 0) scale(1.08);
+  }
+}
+
+.solutions-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, 100%);
+
+  text-align: center;
+}
+
+.solutions-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(12px);
+
+  color: rgba(224, 237, 245, 0.62);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #42d7e9;
+
+  box-shadow:
+    0 0 10px rgba(66, 215, 233, 0.8),
+    0 0 25px rgba(66, 215, 233, 0.3);
+
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.solutions-hero h1 {
+  margin: 0;
+
+  font-size: clamp(52px, 7.4vw, 108px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.solutions-hero h1 span {
+  background:
+    linear-gradient(
+      100deg,
+      #53d9e7,
+      #b4eaf0 35%,
+      #aabce9 65%,
+      #57d8e7
+    );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: movingGradient 7s linear infinite;
+}
+
+@keyframes movingGradient {
+  to {
+    background-position: 250% center;
+  }
+}
+
+.solutions-hero-content > p {
+  width: min(690px, 100%);
+
+  margin: 34px auto 0;
+
+  color: rgba(222, 232, 240, 0.58);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.solutions-hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 36px;
+  padding: 14px 20px;
+
+  border: 1px solid rgba(91, 214, 230, 0.26);
+  border-radius: 999px;
+
+  background: rgba(71, 201, 218, 0.07);
+
+  color: #eafcff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.solutions-hero-button:hover {
+  transform: translateY(-3px);
+
+  background: rgba(71, 201, 218, 0.13);
+
+  border-color: rgba(91, 214, 230, 0.5);
+
+  box-shadow:
+    0 15px 45px rgba(42, 180, 205, 0.1);
+}
+
+.solutions-hero-bottom {
+  position: absolute;
+
+  left: 7vw;
+  right: 7vw;
+  bottom: 35px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.solutions-intro {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 130px 7vw;
+}
+
+.solutions-intro-content {
+  max-width: 950px;
+
+  margin: 65px 0 0 auto;
+}
+
+.solutions-intro-content h2 {
+  margin: 0 0 35px;
+
+  font-size: clamp(40px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.solutions-intro-content h2 em {
+  font-style: italic;
+
+  background:
+    linear-gradient(
+      100deg,
+      #4fd9e7,
+      #a6dfe7
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.solutions-intro-content p {
+  max-width: 780px;
+
+  margin: 0 0 20px;
+
+  color: rgba(222, 232, 240, 0.58);
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.products-section {
+  position: relative;
+
+  padding: 120px 5vw 170px;
+}
+
+.products-heading {
+  width: min(1250px, 100%);
+
+  margin: 0 auto 80px;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 80px;
+}
+
+.products-heading h2 {
+  margin: 35px 0 0;
+
+  font-size: clamp(44px, 6vw, 84px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.products-heading h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.products-heading > p {
+  align-self: end;
+
+  max-width: 430px;
+
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.52);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONSTELLATION
+========================================================= */
+
+.constellation-stage {
+  position: relative;
+
+  width: min(1500px, 100%);
+
+  height: 900px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-radius: 50px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(37, 190, 216, 0.075),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(65, 124, 208, 0.04),
+      transparent 35%
+    ),
+    rgba(255, 255, 255, 0.008);
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.constellation-stage::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  opacity: 0.55;
+
+  mask-image:
+    radial-gradient(
+      circle at center,
+      black 0%,
+      transparent 75%
+    );
+}
+
+.constellation-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.constellation-glow-one {
+  width: 700px;
+  height: 700px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(42, 209, 230, 0.1),
+      transparent 65%
+    );
+
+  filter: blur(12px);
+
+  animation: constellationPulse 7s ease-in-out infinite;
+}
+
+.constellation-glow-two {
+  width: 1100px;
+  height: 1100px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(77, 113, 205, 0.035),
+      transparent 65%
+    );
+
+  filter: blur(25px);
+}
+
+@keyframes constellationPulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.07);
+  }
+}
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.constellation-stars {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.constellation-stars i {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #75e7f1;
+
+  box-shadow:
+    0 0 10px rgba(117, 231, 241, 0.8),
+    0 0 20px rgba(117, 231, 241, 0.25);
+
+  animation: starPulse 3s ease-in-out infinite;
+}
+
+.constellation-stars i:nth-child(1) {
+  top: 18%;
+  left: 23%;
+}
+
+.constellation-stars i:nth-child(2) {
+  top: 27%;
+  right: 18%;
+  animation-delay: 0.7s;
+}
+
+.constellation-stars i:nth-child(3) {
+  bottom: 20%;
+  left: 18%;
+  animation-delay: 1.2s;
+}
+
+.constellation-stars i:nth-child(4) {
+  bottom: 26%;
+  right: 23%;
+  animation-delay: 1.7s;
+}
+
+.constellation-stars i:nth-child(5) {
+  top: 12%;
+  right: 40%;
+  animation-delay: 0.4s;
+}
+
+.constellation-stars i:nth-child(6) {
+  bottom: 14%;
+  left: 45%;
+  animation-delay: 2s;
+}
+
+.constellation-stars i:nth-child(7) {
+  top: 45%;
+  left: 8%;
+  animation-delay: 1.4s;
+}
+
+.constellation-stars i:nth-child(8) {
+  top: 48%;
+  right: 8%;
+  animation-delay: 0.9s;
+}
+
+.constellation-stars i:nth-child(9) {
+  bottom: 37%;
+  left: 30%;
+  animation-delay: 2.4s;
+}
+
+.constellation-stars i:nth-child(10) {
+  top: 35%;
+  right: 30%;
+  animation-delay: 1.9s;
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* =========================================================
+   ORBIT RINGS
+========================================================= */
+
+.constellation-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+.constellation-orbit-one {
+  width: 670px;
+  height: 670px;
+
+  border: 1px solid rgba(82, 216, 233, 0.13);
+
+  animation: orbitSpin 28s linear infinite;
+}
+
+.constellation-orbit-two {
+  width: 820px;
+  height: 820px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(64deg);
+
+  animation:
+    orbitSpinReverse 42s linear infinite;
+}
+
+.constellation-orbit-three {
+  width: 980px;
+  height: 500px;
+
+  border: 1px solid rgba(94, 145, 215, 0.1);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-18deg);
+
+  animation:
+    orbitSpin 36s linear infinite;
+}
+
+@keyframes orbitSpin {
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinReverse {
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(64deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(-296deg);
+  }
+}
+
+/* =========================================================
+   ORBIT LIGHTS
+========================================================= */
+
+.orbit-light {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #66e4f0;
+
+  box-shadow:
+    0 0 10px #66e4f0,
+    0 0 30px rgba(102, 228, 240, 0.7),
+    0 0 60px rgba(102, 228, 240, 0.3);
+
+  pointer-events: none;
+}
+
+.orbit-light-one {
+  left: 50%;
+  top: 50%;
+
+  animation: orbitLightOne 9s linear infinite;
+}
+
+.orbit-light-two {
+  left: 50%;
+  top: 50%;
+
+  animation: orbitLightTwo 13s linear infinite reverse;
+}
+
+.orbit-light-three {
+  left: 50%;
+  top: 50%;
+
+  animation: orbitLightThree 17s linear infinite;
+}
+
+@keyframes orbitLightOne {
+  from {
+    transform:
+      rotate(0deg)
+      translateX(335px)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg)
+      translateX(335px)
+      rotate(-360deg);
+  }
+}
+
+@keyframes orbitLightTwo {
+  from {
+    transform:
+      rotate(0deg)
+      translateX(410px)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg)
+      translateX(410px)
+      rotate(-360deg);
+  }
+}
+
+@keyframes orbitLightThree {
+  from {
+    transform:
+      rotate(0deg)
+      translateX(490px)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg)
+      translateX(490px)
+      rotate(-360deg);
+  }
+}
+
+/* =========================================================
+   CENTER PRODUCT
+========================================================= */
+
+.constellation-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 8;
+
+  transform: translate(-50%, -50%);
+}
+
+.center-energy {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(65, 219, 235, 0.18),
+      rgba(65, 219, 235, 0.035) 42%,
+      transparent 70%
+    );
+
+  filter: blur(8px);
+
+  animation: centerEnergy 5s ease-in-out infinite;
+}
+
+@keyframes centerEnergy {
+  0%,
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.9);
+
+    opacity: 0.65;
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      scale(1.08);
+
+    opacity: 1;
+  }
+}
+
+.center-card {
+  position: relative;
+
+  width: 380px;
+  min-height: 545px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.105),
+      rgba(255, 255, 255, 0.035) 45%,
+      rgba(255, 255, 255, 0.018)
+    );
+
+  backdrop-filter: blur(28px);
+
+  box-shadow:
+    0 50px 130px rgba(0, 0, 0, 0.62),
+    0 0 70px rgba(51, 210, 228, 0.09),
+    inset 0 1px rgba(255, 255, 255, 0.09);
+
+  animation: centerCardAppear 0.7s cubic-bezier(.16, 1, .3, 1);
+}
+
+.center-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(66, 215, 233, 0.12),
+      transparent 48%
+    );
+
+  pointer-events: none;
+}
+
+.center-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 1px;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(90, 226, 240, 0.75),
+      transparent
+    );
+
+  box-shadow:
+    0 0 25px rgba(90, 226, 240, 0.4);
+}
+
+@keyframes centerCardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.center-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.center-card-top > span:first-child {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.center-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.center-status i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #55df9d;
+
+  box-shadow:
+    0 0 9px rgba(85, 223, 157, 0.7);
+}
+
+.center-logo-shell {
+  position: relative;
+
+  width: 250px;
+  height: 250px;
+
+  margin: 35px auto 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.07),
+    0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.center-logo-glow {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(69, 219, 234, 0.2),
+      transparent 68%
+    );
+
+  filter: blur(12px);
+
+  animation: logoGlow 4s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.center-logo-shell img {
+  position: relative;
+  z-index: 2;
+
+  width: 190px;
+  height: 190px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 25px 35px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 25px rgba(73, 215, 232, 0.16));
+
+  animation: centerLogoFloat 5s ease-in-out infinite;
+}
+
+@keyframes centerLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.center-information {
+  position: relative;
+  z-index: 2;
+}
+
+.center-information > span {
+  color: rgba(255, 255, 255, 0.37);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.center-information h3 {
+  margin: 8px 0;
+
+  font-size: 34px;
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.center-information p {
+  min-height: 48px;
+
+  margin: 0;
+
+  color: rgba(225, 234, 240, 0.56);
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.center-launch {
+  margin-top: 18px;
+  padding-top: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.center-launch span {
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.center-launch strong {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   PLANETARY PRODUCT ORBIT
+   The center product stays fixed.
+   The six surrounding cards orbit around it.
+========================================================= */
+
+.orbiting-products {
+  position: absolute;
+  inset: 0;
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  /*
+    This layer moves the six PRODUCT CARDS.
+    The decorative orbit rings remain completely independent.
+  */
+  animation: productSystemOrbit 34s linear infinite;
+}
+
+
+/* =========================================================
+   ALL SIX CARDS — EXACT SAME SIZE
+========================================================= */
+
+.orbit-product-card {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 235px;
+  height: 125px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.075),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  backdrop-filter: blur(18px);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  pointer-events: auto;
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.34),
+    inset 0 1px rgba(255, 255, 255, 0.045);
+
+  /*
+    Every card uses the same physical dimensions.
+  */
+  flex: 0 0 235px;
+
+  /*
+    Important:
+    The cards orbit around the CENTER of the constellation,
+    not around the orbit ring itself.
+  */
+  transform-origin: center center;
+
+  transition:
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   SIX PLANET POSITIONS
+   60 degrees apart around the fixed center.
+========================================================= */
+
+/*
+   CARD 1
+   Top
+*/
+.orbit-top {
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg)
+    translateY(-325px)
+    rotate(0deg);
+}
+
+
+/*
+   CARD 2
+   Upper-right
+*/
+.orbit-upper-right {
+  transform:
+    translate(-50%, -50%)
+    rotate(60deg)
+    translateY(-325px)
+    rotate(-60deg);
+}
+
+
+/*
+   CARD 3
+   Lower-right
+*/
+.orbit-lower-right {
+  transform:
+    translate(-50%, -50%)
+    rotate(120deg)
+    translateY(-325px)
+    rotate(-120deg);
+}
+
+
+/*
+   CARD 4
+   Bottom
+*/
+.orbit-bottom {
+  transform:
+    translate(-50%, -50%)
+    rotate(180deg)
+    translateY(-325px)
+    rotate(-180deg);
+}
+
+
+/*
+   CARD 5
+   Lower-left
+*/
+.orbit-lower-left {
+  transform:
+    translate(-50%, -50%)
+    rotate(240deg)
+    translateY(-325px)
+    rotate(-240deg);
+}
+
+
+/*
+   CARD 6
+   Upper-left
+*/
+.orbit-upper-left {
+  transform:
+    translate(-50%, -50%)
+    rotate(300deg)
+    translateY(-325px)
+    rotate(-300deg);
+}
+
+
+/* =========================================================
+   ORBIT ANIMATION
+
+   The center card does NOT move.
+
+   Only this six-card layer moves.
+========================================================= */
+
+@keyframes productSystemOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.orbit-product-card:hover {
+  border-color: rgba(91, 218, 233, 0.48);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(82, 213, 230, 0.13),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  box-shadow:
+    0 30px 75px rgba(0, 0, 0, 0.42),
+    0 0 35px rgba(65, 210, 229, 0.15),
+    0 0 80px rgba(65, 210, 229, 0.06),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   CARD LIGHT LINE
+========================================================= */
+
+.orbit-card-line {
+  position: absolute;
+
+  width: 3px;
+  height: 55%;
+
+  left: 0;
+  top: 22%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(83, 220, 235, 0.75),
+      transparent
+    );
+
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   PRODUCT LOGO — ROUNDED SQUARE
+========================================================= */
+
+.orbit-card-logo {
+  width: 70px;
+  height: 70px;
+
+  flex: 0 0 70px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.orbit-product-card:hover .orbit-card-logo {
+  transform: scale(1.07);
+
+  border-color: rgba(85, 218, 233, 0.28);
+
+  box-shadow:
+    0 0 25px rgba(73, 215, 231, 0.12);
+}
+
+.orbit-card-logo img {
+  width: 54px;
+  height: 54px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.4));
+
+  transition: transform 0.4s ease;
+}
+
+.orbit-product-card:hover .orbit-card-logo img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.orbit-card-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex: 1;
+}
+
+.orbit-card-content span {
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.31);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.orbit-card-content strong {
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+  font-weight: 650;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.orbit-card-arrow {
+  color: rgba(255, 255, 255, 0.25);
+
+  flex: 0 0 auto;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.orbit-product-card:hover .orbit-card-arrow {
+  color: #64deeb;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   SELECTOR
+========================================================= */
+
+.product-selector {
+  position: absolute;
+
+  left: 50%;
+  bottom: 28px;
+
+  z-index: 15;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 999px;
+
+  background: rgba(2, 7, 17, 0.6);
+
+  backdrop-filter: blur(16px);
+}
+
+.product-selector button {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  color: rgba(255, 255, 255, 0.3);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.product-selector button:hover,
+.product-selector button.selected {
+  transform: translateY(-3px);
+
+  border-color: rgba(82, 215, 231, 0.45);
+
+  background: rgba(68, 208, 225, 0.1);
+
+  color: #91eaf3;
+
+  box-shadow:
+    0 0 22px rgba(71, 213, 229, 0.1);
+}
+
+.product-selector span {
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.constellation-caption {
+  position: absolute;
+
+  left: 50%;
+  bottom: 85px;
+
+  transform: translateX(-50%);
+
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PRODUCT DESCRIPTION
+========================================================= */
+
+.selected-product-description {
+  width: min(1200px, 100%);
+
+  margin: 55px auto 0;
+
+  padding: 52px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      140deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  backdrop-filter: blur(15px);
+}
+
+.description-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 45px;
+
+  color: #5fd9e7;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.description-grid {
+  display: grid;
+
+  grid-template-columns: 0.7fr 1.3fr;
+
+  gap: 80px;
+}
+
+.description-title > span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.description-title h3 {
+  margin: 15px 0 0;
+
+  font-size: clamp(38px, 5vw, 66px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+.description-title strong {
+  background:
+    linear-gradient(
+      100deg,
+      #57dce9,
+      #c0edf2
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.description-copy > p {
+  margin: 0;
+
+  color: rgba(225, 234, 240, 0.58);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.feature-list {
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.feature-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+}
+
+.feature-list div span {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 5px;
+
+  border-radius: 50%;
+
+  background: #5edce9;
+
+  box-shadow:
+    0 0 10px rgba(94, 220, 233, 0.55);
+}
+
+/* =========================================================
+   CATEGORY SECTION
+========================================================= */
+
+.category-section {
+  padding: 150px 7vw;
+
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+.category-heading {
+  margin: 65px 0 70px;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.category-heading h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5.7vw, 78px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.category-heading h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.category-heading p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.5);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+.category-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.category-grid article {
+  min-height: 280px;
+
+  padding: 30px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.category-grid article:hover {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(66, 214, 232, 0.08),
+      transparent 60%
+    );
+
+  transform: translateY(-5px);
+}
+
+.category-grid article > span {
+  color: rgba(94, 220, 233, 0.65);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.category-grid h3 {
+  margin: 70px 0 15px;
+
+  font-size: 19px;
+
+  letter-spacing: -0.02em;
+}
+
+.category-grid p {
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.43);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.philosophy-section {
+  position: relative;
+
+  padding: 160px 7vw;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(47, 193, 218, 0.055),
+      transparent 32%
+    );
+}
+
+.philosophy-background-text {
+  position: absolute;
+
+  right: -2vw;
+  top: 30px;
+
+  color: rgba(255, 255, 255, 0.018);
+
+  font-size: clamp(150px, 25vw, 400px);
+
+  font-weight: 900;
+
+  letter-spacing: -0.09em;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.philosophy-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 70px auto 100px;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.philosophy-kicker {
+  color: rgba(94, 220, 233, 0.58);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.philosophy-content h2 {
+  margin: 22px 0 0;
+
+  font-size: clamp(44px, 6vw, 86px);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.06em;
+}
+
+.philosophy-content h2 em {
+  color: #63dce9;
+
+  font-style: italic;
+}
+
+.philosophy-content > p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.48);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.approach-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.approach-grid article {
+  min-height: 260px;
+
+  padding: 28px;
+
+  background: #020711;
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.approach-grid article:hover {
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(54, 209, 228, 0.08),
+      transparent 65%
+    ),
+    #020711;
+
+  transform: translateY(-4px);
+}
+
+.approach-grid article > span {
+  display: block;
+
+  margin-bottom: 45px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+}
+
+.approach-grid article svg {
+  color: #5fdbe8;
+
+  margin-bottom: 18px;
+}
+
+.approach-grid h3 {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+}
+
+.approach-grid p {
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.42);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   DEVELOPMENT
+========================================================= */
+
+.development-section {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 160px 7vw;
+}
+
+.development-heading {
+  margin: 65px 0 90px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.development-heading h2 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 88px);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.06em;
+}
+
+.development-heading h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.development-heading p {
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.48);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+.development-track {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.development-line {
+  position: absolute;
+
+  left: 15px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(76, 218, 232, 0),
+      rgba(76, 218, 232, 0.4),
+      rgba(76, 218, 232, 0)
+    );
+}
+
+.development-item {
+  position: relative;
+
+  min-height: 150px;
+
+  display: grid;
+
+  grid-template-columns: 32px 1fr;
+
+  gap: 35px;
+
+  padding: 0 0 60px;
+}
+
+.development-item > span {
+  position: relative;
+  z-index: 2;
+
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(92, 218, 233, 0.25);
+
+  border-radius: 50%;
+
+  background: #020711;
+
+  color: #6ddde9;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.development-item small {
+  color: rgba(95, 219, 232, 0.55);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.development-item h3 {
+  margin: 8px 0;
+
+  font-size: 27px;
+
+  letter-spacing: -0.03em;
+}
+
+.development-item p {
+  margin: 0;
+
+  color: rgba(222, 232, 240, 0.4);
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   VISION
+========================================================= */
+
+.solutions-vision {
+  position: relative;
+
+  min-height: 750px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 120px 7vw;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.solutions-vision .vision-grid {
+  opacity: 0.14;
+}
+
+.vision-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, 100%);
+
+  text-align: center;
+}
+
+.vision-content .solutions-section-label {
+  justify-content: center;
+}
+
+.vision-content h2 {
+  margin: 50px 0 30px;
+
+  font-size: clamp(50px, 7vw, 100px);
+
+  line-height: 0.93;
+
+  letter-spacing: -0.065em;
+}
+
+.vision-content h2 span {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.vision-content > p {
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 11px;
+
+  letter-spacing: 0.17em;
+}
+
+.vision-quote {
+  margin-top: 70px;
+}
+
+.vision-quote > span {
+  color: #58dce9;
+
+  font-size: 55px;
+
+  line-height: 0;
+}
+
+.vision-quote blockquote {
+  margin: 20px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(21px, 3vw, 34px);
+
+  font-style: italic;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.solutions-final-cta {
+  position: relative;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 170px 7vw;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.cta-glow {
+  position: absolute;
+
+  width: 650px;
+  height: 400px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(51, 204, 225, 0.1),
+      transparent 68%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.solutions-final-cta .solutions-section-label {
+  position: relative;
+  z-index: 2;
+
+  justify-content: center;
+}
+
+.solutions-final-cta h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 45px 0 25px;
+
+  font-size: clamp(52px, 7vw, 100px);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.06em;
+}
+
+.solutions-final-cta h2 span {
+  background:
+    linear-gradient(
+      100deg,
+      #53dce9,
+      #b7edf1
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.solutions-final-cta > p {
+  position: relative;
+  z-index: 2;
+
+  width: min(600px, 100%);
+
+  margin: 0 auto;
+
+  color: rgba(222, 232, 240, 0.48);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.final-cta-buttons {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.final-cta-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 14px 21px;
+
+  border: 1px solid rgba(85, 218, 233, 0.3);
+
+  border-radius: 999px;
+
+  background: rgba(69, 208, 224, 0.08);
+
+  color: #e9fdff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.final-cta-buttons a:hover {
+  transform: translateY(-3px);
+
+  background: rgba(69, 208, 224, 0.14);
+
+  border-color: rgba(85, 218, 233, 0.55);
+}
+
+.final-cta-buttons a.secondary {
+  border-color: rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .constellation-stage {
+    height: 850px;
+  }
+
+  .orbit-product-card {
+    width: 215px;
+  }
+
+  .orbit-upper-left,
+  .orbit-lower-left {
+    left: 3%;
+  }
+
+  .orbit-upper-right,
+  .orbit-lower-right {
+    right: 3%;
+  }
+
+  .constellation-orbit-one {
+    width: 610px;
+    height: 610px;
+  }
+
+  .constellation-orbit-two {
+    width: 750px;
+    height: 750px;
+  }
+
+  .constellation-orbit-three {
+    width: 850px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+  .solutions-hero {
+    min-height: 760px;
+
+    padding:
+      125px 22px
+      80px;
+  }
+
+  .solutions-hero h1 {
+    font-size: clamp(46px, 13vw, 68px);
+  }
+
+  .solutions-hero-content > p {
+    font-size: 14px;
+  }
+
+  .solutions-hero-bottom {
+    left: 22px;
+    right: 22px;
+  }
+
+  .solutions-intro {
+    padding: 90px 22px;
+  }
+
+  .solutions-intro-content {
+    margin-top: 45px;
+  }
+
+  .products-section {
+    padding:
+      90px 18px
+      100px;
+  }
+
+  .products-heading {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .products-heading h2 {
+    font-size: clamp(45px, 13vw, 68px);
+  }
+
+  .products-heading > p {
+    margin-top: 25px;
+  }
+
+  /*
+     Mobile deliberately stops using the desktop
+     orbital positioning. A phone should not receive
+     a tiny desktop solar system.
+  */
+
+  .constellation-stage {
+    height: auto;
+
+    min-height: 0;
+
+    padding:
+      35px 18px
+      110px;
+
+    overflow: visible;
+
+    border-radius: 30px;
+  }
+
+  .constellation-orbit,
+  .orbit-light,
+  .constellation-stars {
+    opacity: 0.55;
+  }
+
+  .constellation-orbit-one {
+    width: 330px;
+    height: 330px;
+  }
+
+  .constellation-orbit-two {
+    width: 440px;
+    height: 440px;
+  }
+
+  .constellation-orbit-three {
+    width: 500px;
+    height: 260px;
+  }
+
+  .constellation-center {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 35px;
+  }
+
+  .center-energy {
+    width: 420px;
+    height: 420px;
+  }
+
+  .center-card {
+    width: min(360px, 100%);
+
+    min-height: 500px;
+  }
+
+  .center-logo-shell {
+    width: 205px;
+    height: 205px;
+
+    border-radius: 34px;
+  }
+
+  .center-logo-shell img {
+    width: 155px;
+    height: 155px;
+  }
+
+  .orbiting-products {
+    position: relative;
+    inset: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    pointer-events: auto;
+  }
+
+  .orbit-product-card,
+  .orbit-top,
+  .orbit-upper-right,
+  .orbit-lower-right,
+  .orbit-bottom,
+  .orbit-lower-left,
+  .orbit-upper-left {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    transform: none;
+
+    width: 100%;
+    height: 112px;
+  }
+
+  .orbit-product-card:hover,
+  .orbit-top:hover,
+  .orbit-bottom:hover {
+    transform:
+      translateY(-5px)
+      scale(1.02);
+  }
+
+  .orbit-card-logo {
+    width: 55px;
+    height: 55px;
+
+    flex-basis: 55px;
+
+    border-radius: 15px;
+  }
+
+  .orbit-card-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .orbit-card-content strong {
+    font-size: 11px;
+  }
+
+  .orbit-card-arrow {
+    display: none;
+  }
+
+  .product-selector {
+    bottom: 28px;
+
+    max-width: calc(100% - 30px);
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .product-selector::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-selector button {
+    flex: 0 0 35px;
+  }
+
+  .constellation-caption {
+    display: none;
+  }
+
+  .selected-product-description {
+    margin-top: 30px;
+
+    padding: 30px 22px;
+
+    border-radius: 22px;
+  }
+
+  .description-grid {
+    display: block;
+  }
+
+  .description-copy {
+    margin-top: 35px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .category-section,
+  .development-section {
+    padding:
+      100px 22px;
+  }
+
+  .category-heading,
+  .development-heading {
+    display: block;
+
+    margin-top: 45px;
+  }
+
+  .category-heading p,
+  .development-heading p {
+    margin-top: 30px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid article {
+    min-height: 220px;
+  }
+
+  .category-grid h3 {
+    margin-top: 50px;
+  }
+
+  .philosophy-section {
+    padding:
+      110px 22px;
+  }
+
+  .philosophy-content {
+    display: block;
+
+    margin-top: 45px;
+  }
+
+  .philosophy-content > p {
+    margin-top: 35px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid article {
+    min-height: 210px;
+  }
+
+  .development-heading {
+    margin-bottom: 65px;
+  }
+
+  .development-item h3 {
+    font-size: 20px;
+  }
+
+  .solutions-vision {
+    min-height: 620px;
+
+    padding:
+      100px 22px;
+  }
+
+  .vision-content h2 {
+    font-size: clamp(46px, 13vw, 68px);
+  }
+
+  .solutions-final-cta {
+    padding:
+      110px 22px;
+  }
+
+  .solutions-final-cta h2 {
+    font-size: clamp(48px, 13vw, 72px);
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .final-cta-buttons a {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .solutions-page *,
+  .solutions-page *::before,
+  .solutions-page *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

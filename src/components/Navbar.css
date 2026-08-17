@@ -1,0 +1,408 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  padding: 18px 28px;
+
+  transition:
+    padding 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.navbar-inner {
+  width: min(1380px, 100%);
+  height: 70px;
+
+  margin: 0 auto;
+  padding: 8px 10px 8px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+
+  background: rgba(5, 14, 20, 0.58);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.navbar-scrolled {
+  padding-top: 10px;
+}
+
+.navbar-scrolled .navbar-inner {
+  background: rgba(3, 10, 15, 0.88);
+
+  border-color: rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* LOGO */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: white;
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo-box {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-box {
+  transform: translateY(-2px) rotate(-2deg);
+}
+
+.navbar-logo-box img {
+  width: 29px;
+  height: 29px;
+
+  object-fit: contain;
+}
+
+.navbar-brand-name {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.navbar-brand-name small {
+  margin-top: 5px;
+
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* DESKTOP NAV */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 13px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  border-radius: 12px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: white;
+
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.navbar-link.active {
+  color: white;
+
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.navbar-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 5px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #54d8e8;
+
+  transform: translateX(-50%);
+
+  box-shadow: 0 0 12px rgba(84, 216, 232, 0.8);
+}
+
+.nav-number {
+  display: none;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+}
+
+.nav-arrow {
+  opacity: 0;
+
+  transform: translate(-4px, 4px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-link:hover .nav-arrow {
+  opacity: 0.8;
+
+  transform: translate(0, 0);
+}
+
+.mobile-menu-button {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.mobile-nav-heading,
+.mobile-nav-footer {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .navbar {
+    padding: 15px 18px;
+  }
+
+  .navbar-inner {
+    height: 64px;
+  }
+
+  .navbar-link {
+    padding: 10px 8px;
+
+    font-size: 11px;
+  }
+
+  .navbar-brand-name {
+    display: none;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  .navbar-inner {
+    height: 60px;
+
+    padding: 7px 8px 7px 9px;
+
+    border-radius: 18px;
+  }
+
+  .navbar-logo-box {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+  }
+
+  .navbar-brand-name {
+    display: flex;
+  }
+
+  .navbar-brand-name small {
+    font-size: 6px;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+
+    top: 84px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 26px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 6px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+
+    background: rgba(4, 12, 17, 0.96);
+
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .navbar-links.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .mobile-nav-heading {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .navbar-link {
+    min-height: 55px;
+
+    padding: 0 12px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    border-radius: 13px;
+  }
+
+  .nav-number {
+    display: block;
+
+    width: 24px;
+  }
+
+  .nav-arrow {
+    margin-left: auto;
+
+    opacity: 0.5;
+
+    transform: none;
+  }
+
+  .navbar-link.active::after {
+    left: 4px;
+    bottom: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    transform: translateY(50%);
+  }
+
+  .mobile-nav-footer {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: auto;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+  }
+}
