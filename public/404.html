@@ -6,10 +6,21 @@
     <title>INNCA Technologies</title>
 
     <script>
-      sessionStorage.redirect = location.href;
-    </script>
+      const path = window.location.pathname;
 
-    <meta http-equiv="refresh" content="0;URL='/'" />
+      const base = "/INNCA_TECHNOLOGIES/";
+
+      const redirect =
+        base +
+        "?redirect=" +
+        encodeURIComponent(
+          path.replace(base, "") + window.location.search
+        );
+
+      sessionStorage.setItem("redirect", redirect);
+
+      window.location.replace(base);
+    </script>
   </head>
 
   <body>
